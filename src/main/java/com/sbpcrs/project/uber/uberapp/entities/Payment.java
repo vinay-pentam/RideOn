@@ -3,8 +3,7 @@ package com.sbpcrs.project.uber.uberapp.entities;
 import com.sbpcrs.project.uber.uberapp.entities.enums.PaymentMethod;
 import com.sbpcrs.project.uber.uberapp.entities.enums.PaymentStatus;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
@@ -12,6 +11,9 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

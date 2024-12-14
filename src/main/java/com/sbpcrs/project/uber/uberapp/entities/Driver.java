@@ -1,13 +1,18 @@
 package com.sbpcrs.project.uber.uberapp.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.locationtech.jts.geom.Point;
 
 @Entity
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(indexes = {
+        @Index(name = "idx_driver_vehicle_id", columnList = "vehicleId")
+})
 public class Driver {
 
     @Id
@@ -18,11 +23,13 @@ public class Driver {
     @JoinColumn(name = "user_id")
     private User user;
 
-    private Double rating;
+    private Double rating = 0.0;
 
     private Boolean available;
 
     @Column(columnDefinition = "Geometry(Point, 4326)")
     private Point currentLocation;
+
+    private String vehicleId;
 
 }
