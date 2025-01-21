@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sbpcrs.project.uber</groupId>
-	<artifactId>uberapp</artifactId>
+	<artifactId>Uberapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>uberapp</name>
 	<description>Demo project for Spring Boot</description>
